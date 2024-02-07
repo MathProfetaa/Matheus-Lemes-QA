@@ -156,9 +156,8 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
 
   });
-
   function enviarMensagem() {
-    // Obter os valores do formulário
+    // Obter os dados do formulário
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
     const mensagem = document.getElementById('mensagem').value;
@@ -169,24 +168,22 @@ for (let i = 0; i < navigationLinks.length; i++) {
       return;
     }
   
-    // Criar o corpo da mensagem
-    const corpoMensagem = `
-    Nome: ${nome}
-    E-mail: ${email}
-    Mensagem: ${mensagem}
-    `;
+    // Criar a URL para a requisição GET
+    const url = `https://api.emailjs.com/api/v1.0/email/send?from_name=${nome}&from_email=${email}&message=${mensagem}&to_email=contato@matheusqa.eu`;
   
-    // Enviar a mensagem
-    emailjs.sendForm('service_wreh52v', 'template_vk19z9j', {
-      from_name: nome,
-      from_email: email,
-      message: corpoMensagem,
+    // Fazer a requisição GET
+    fetch(url, {
+      method: 'GET',
     }).then(
-      message => alert('Mensagem enviada com sucesso!'),
-      error => alert('Erro ao enviar mensagem!')
+      response => {
+        if (response.status === 200) {
+          alert('Mensagem enviada com sucesso!');
+        } else {
+          alert('Erro ao enviar mensagem!');
+        }
+      }
     );
   }
-  
-  // Atribuir a função ao evento de clique do botão
-  document.getElementById('enviar').addEventListener('click', enviarMensagem);
 }
+
+document.getElementById('formulario').addEventListener('submit', enviarMensagem);
