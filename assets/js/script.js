@@ -173,7 +173,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
   
     // Fazer a requisição GET
     fetch(url, {
-      method: 'GET',
+      method: 'POST',
     }).then(
       response => {
         if (response.status === 200) {
