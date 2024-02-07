@@ -1148,7 +1148,7 @@ Implementation of the software quality sector in the company.
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+          <form action="enviar.php" method="post" class="form" data-form >
 
             <div class="input-wrapper">
               <input type="text" name="fullname" id="nome" class="form-input" placeholder="Full name" required data-form-input>
@@ -1158,9 +1158,10 @@ Implementation of the software quality sector in the company.
 
             <textarea name="message" id="mensagem" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-            <button class="form-btn" id="enviar "type="submit" disabled data-form-btn>
+            <button class="form-btn" id="enviar" type="submit" data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
+              <script src="https://cdn.emailjs.com/sdk/2.0.0/emailjs.min.js"></script>
             </button>
 
           </form>
