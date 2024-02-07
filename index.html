@@ -1137,7 +1137,16 @@ Implementation of the software quality sector in the company.
       <!--
         - #CONTACT
       -->
-
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "Xo1tVrkOv9tvRJHaW",
+      });
+   })();
+</script>
       <article class="contact" data-page="contact">
 
         <header>
@@ -1161,7 +1170,7 @@ Implementation of the software quality sector in the company.
             <button class="form-btn" id="enviar" type="submit" data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
-              <script src="https://cdn.emailjs.com/sdk/2.0.0/emailjs.min.js"></script>
+              
             </button>
 
           </form>
