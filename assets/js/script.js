@@ -1,6 +1,4 @@
 'use strict';
-import emailjs from "emailjs-com";
-
 
 
 
@@ -157,10 +155,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
       }
     }
 
-
-    
   });
-
 
   function enviarMensagem() {
     // Obter os valores do formulário
