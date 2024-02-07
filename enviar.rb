@@ -30,7 +30,7 @@ MSG
 
 
 
-Net::SMTP.start('sandbox.smtp.mailtrap.io', 2525, 'sandbox.smtp.mailtrap.io', 'b777da751d2726', '0df76af114df84', :login) do |smtp|
+Net::SMTP.start('smtp.zoho.eu', 465, 'smtp.zoho.eu', 'contato@matheusqa.eu', '020921M@ria', :login) do |smtp|
   smtp.send_message("#{mensagem}", "#{email}", 'contato@matheusqa.eu')
   smtp.finish
 end
