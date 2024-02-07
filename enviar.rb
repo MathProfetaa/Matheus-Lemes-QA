@@ -18,21 +18,23 @@ corpo_mensagem = <<~MSG
   Mensagem: #{mensagem}
 MSG
 
-# Configurar o SMTP
-smtp = Net::SMTP.new('sandbox.smtp.mailtrap.io', 2525)
-smtp.start('sandbox.smtp.mailtrap.io', 'b777da751d2726', '0df76af114df84', :plain)
+# # Configurar o SMTP
+# smtp = Net::SMTP.new('sandbox.smtp.mailtrap.io', 2525)
+# smtp.start('sandbox.smtp.mailtrap.io', 'b777da751d2726', '0df76af114df84', :plain)
 
-# Enviar o e-mail
-smtp.send_message("#{mensagem}", "#{email}", 'contato@matheusqa.eu')
+# # Enviar o e-mail
+# smtp.send_message("#{mensagem}", "#{email}", 'contato@matheusqa.eu')
 
-# Fechar a conexão SMTP
-smtp.finish
+# # Fechar a conexão SMTP
+# smtp.finish
 
-# Mensagem de sucesso
-flash[:success] = 'Mensagem enviada com sucesso!'
-redirect_to '/'
+
 
 Net::SMTP.start('sandbox.smtp.mailtrap.io', 2525, 'sandbox.smtp.mailtrap.io', 'b777da751d2726', '0df76af114df84', :login) do |smtp|
   smtp.send_message("#{mensagem}", "#{email}", 'contato@matheusqa.eu')
   smtp.finish
 end
+
+# Mensagem de sucesso
+flash[:success] = 'Mensagem enviada com sucesso!'
+redirect_to '/'
