@@ -1,5 +1,4 @@
 'use strict';
-import emailjs from "emailjs-com";
 
 
 
