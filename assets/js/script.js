@@ -157,7 +157,20 @@ for (let i = 0; i < navigationLinks.length; i++) {
       }
     }
 
+
+    
   });
+
+
+  
+  <><script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script><script type="text/javascript">
+      (function(){emailjs.init({
+        publicKey: "Xo1tVrkOv9tvRJHaW",
+      })};
+      )();
+    </script></>
 
   function enviarMensagem() {
     // Obter os valores do formulário
